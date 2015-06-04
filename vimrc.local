@@ -1,0 +1,122 @@
+" removes ability to use the arrow keys in normal mode for training
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+" Actually use folding :)
+autocmd BufEnter * setlocal foldmethod=syntax
+nnoremap <space> za
+
+" Move lines
+noremap _ ddp
+noremap - ddkP
+
+iabbrev @@ jonathan.reem@gmail.com
+
+set whichwrap+=<,>,h,l,[,]
+set expandtab
+set nocursorline " don't highlight current line
+set textwidth=79
+set shell=/bin/zsh " use a good shell for :sh
+
+" Enable rust ctags
+set tags+=/usr/local/src/rust/TAGS.vi
+
+let g:haddock_browser = "open"
+let g:ghc = "/usr/bin/ghc"
+let g:haddock_docdir = "/Users/reem/Library/Haskell/doc/"
+
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_html_checkers = ['jshint', 'tidy']
+let g:syntastic_html_tidy_ignore_errors=['trimming empty']
+let g:syntastic_handlebars_checkers = ['handlebars']
+
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_write = 1
+let g:pymode_lint_message = 1
+let g:pymode_folding = 1
+
+let g:mustache_abbreviations = 1
+
+" keyboard shortcuts
+inoremap jj <ESC>
+
+command HType :GhcModType
+command HCType :GhcModTypeClear
+command HIType :GhcModTypeInsert
+
+" Disable spf13 functionality
+UnBundle 'myusuf3/numbers.vim'
+UnBundle 'nathanaelkane/vim-indent-guides'
+UnBundle 'Twinside/vim-haskellConceal'
+UnBundle 'godlygeek/csapprox'
+UnBundle 'reedes/vim-textobj-quote'
+UnBundle 'spf13/vim-preview'
+UnBundle 'spf13/vim-autoclose'
+let g:enable_numbers = 0
+
+" Disable all concealing.
+let conceallevel = 0
+
+" Disable lots of vim2hs (all the concealing)
+let g:haskell_conceal       = 0
+let g:haskell_quasi         = 0
+let g:haskell_interpolation = 0
+let g:haskell_regex         = 0
+let g:haskell_jmacro        = 0
+let g:haskell_shqq          = 0
+let g:haskell_sql           = 0
+let g:haskell_json          = 0
+let g:haskell_xml           = 0
+let g:haskell_hsp           = 0
+let g:haskell_tabular       = 0
+
+" Indentation settings.
+autocmd FileType ruby setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType coffee setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType haskell setlocal expandtab shiftwidth=4 softtabstop=4
+
+" Airline settings
+
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+let g:airline_theme='badwolf'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#show_buffers = 0
+
+let g:solarized_termcolors=16
+set background=dark
+colorscheme solarized
