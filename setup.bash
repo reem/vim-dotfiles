@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ln -s ~/code/vim/vimrc.local ~/.vimrc.local
-ln -s ~/code/vim/vimrc.before.local ~/.vimrc.before.local
+ln -s $(pwd)/vimrc.local ~/.vimrc.local
+ln -s $(pwd)/vimrc.before.local ~/.vimrc.before.local
 
