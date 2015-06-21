@@ -55,7 +55,7 @@ UnBundle 'Twinside/vim-haskellConceal'
 UnBundle 'godlygeek/csapprox'
 UnBundle 'reedes/vim-textobj-quote'
 UnBundle 'spf13/vim-preview'
-UnBundle 'spf13/vim-autoclose'
+UnBundle 'jiangmiao/auto-pairs'
 let g:enable_numbers = 0
 
 " Disable all concealing.
