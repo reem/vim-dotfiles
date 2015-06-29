@@ -1,2 +1,48 @@
 "  Jonathan Reem's personal vim configuration.
 set nocompatible
+
+" Bootstrap
+Bundle 'gmarik/vundle'
+
+" General
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'mbbill/undotree'
+Bundle 'reedes/vim-litecorrect'
+
+" Deps
+Bundle 'kana/vim-textobj-user'
+Bundle 'kana/vim-textobj-indent'
+
+" Searching
+Bundle 'mileszs/ack.vim'
+Bundle 'osyo-manga/vim-over'
+Bundle 'tpope/vim-abolish'
+
+" Movement
+Bundle 'gcmt/wildfire.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'matchit.zip'
+
+" Views/Sessions
+Bundle 'vim-scripts/restore_view.vim'
+Bundle 'vim-scripts/sessionman.vim'
+
+" Colors
+Bundle 'altercation/vim-colors-solarized'
+
+" <C-p> searching
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'tacahiroy/ctrlp-funky'
+
+" <C-n> Multi-cursor support
+Bundle 'kristijanhusak/vim-multiple-cursors'
+
+" UI
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
+Bundle 'airblade/vim-gitgutter'
+
+

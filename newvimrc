@@ -18,6 +18,8 @@
 
 set nocompatible
 set shell=/usr/local/bin/zsh
+set encoding=utf-8
+setglobal fileencoding=utf-8
 
 " Pull in pre-plugin config.
 if filereadable(expand("~/.vimrc.before"))
