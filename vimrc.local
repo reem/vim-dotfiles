@@ -8,6 +8,9 @@ map <Down> <Nop>
 autocmd BufEnter * setlocal foldmethod=syntax
 nnoremap <space> za
 
+" keyboard shortcuts
+inoremap jj <ESC>
+
 " Move lines
 noremap _ ddp
 noremap - ddkP
@@ -19,6 +22,15 @@ set expandtab
 set nocursorline " don't highlight current line
 set textwidth=79
 set shell=/bin/zsh " use a good shell for :sh
+
+" s{char}{char}{label}
+nmap s <Plug>(easymotion-s2)
+
+map j <Plug>(easymotion-j)
+map k <Plug>(easymotion-k)
+
+" Make matching case insensitive.
+let g:EasyMotion_smartcase = 1
 
 " Enable rust ctags
 set tags+=/usr/local/src/rust/TAGS.vi
@@ -41,9 +53,6 @@ let g:pymode_folding = 1
 
 let g:mustache_abbreviations = 1
 
-" keyboard shortcuts
-inoremap jj <ESC>
-
 command HType :GhcModType
 command HCType :GhcModTypeClear
 command HIType :GhcModTypeInsert
@@ -55,7 +64,6 @@ UnBundle 'Twinside/vim-haskellConceal'
 UnBundle 'godlygeek/csapprox'
 UnBundle 'reedes/vim-textobj-quote'
 UnBundle 'spf13/vim-preview'
-UnBundle 'jiangmiao/auto-pairs'
 let g:enable_numbers = 0
 
 " Disable all concealing.
@@ -120,3 +128,4 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:solarized_termcolors=16
 set background=dark
 colorscheme solarized
+
