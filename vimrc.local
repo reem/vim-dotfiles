@@ -23,8 +23,8 @@ set nocursorline " don't highlight current line
 set textwidth=79
 set shell=/bin/zsh " use a good shell for :sh
 
-" s{char}{char}{label}
-nmap s <Plug>(easymotion-s2)
+" s{char}{label}
+nmap s <Plug>(easymotion-s)
 
 map j <Plug>(easymotion-j)
 map k <Plug>(easymotion-k)
